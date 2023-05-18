@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 import sys
 #This module allows us to obtain the parameters from the script
@@ -16,8 +17,8 @@ except IndexError:
 # "trans -no-ansi -brief text-to-translate" is the command to get the simplified translation without any other information
 
 
-#Execute the command that will send the translated text to the windows clipboard
-os.system('trans -no-ansi -brief "{}" | clip.exe'.format(text))
+#Execute the command that will send the translated text to the clipboard
+os.system('trans -no-ansi -brief "{}" | xclip -selection clipboard'.format(text))
 
 
 print("The text was copied to the clipboard. :)") 
