@@ -18,7 +18,7 @@ except IndexError:
 
 
 #Execute the command that will send the translated text to the clipboard
-os.system('trans -no-ansi -brief "{}" | xclip -selection clipboard'.format(text))
+os.system('trans -no-auto -no-ansi -brief "{}" | xclip -selection clipboard'.format(text))
 
 
 print("The text was copied to the clipboard. :)") 
